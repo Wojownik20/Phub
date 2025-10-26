@@ -1,0 +1,450 @@
+
+/* Ustawienia globalne dla tła i czcionki */
+body { margin: 0; font-family: Arial, sans-serif; }
+
+/* Główny kontener nagłówka */
+.ph-header {
+    background-color: #212121; /* Bardzo ciemny szary/czarny */
+    color: white;
+}
+
+/* Pasek z linkami na samej górze */
+.ph-top-nav {
+    background-color: #000000; /* Całkowicie czarny */
+    padding: 5px 20px;
+    font-size: 12px;
+}
+.ph-top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Użycie Flexbox do ułożenia linków w rzędzie */
+}
+.ph-top-links li {
+    margin-right: 15px;
+}
+.ph-top-links a {
+    color: #aaaaaa; /* Jasnoszary tekst */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Główny pasek */
+.ph-main-bar {
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie */
+    padding: 10px 20px;
+    background-color: #000000;
+}
+.ph-menu-button {
+    background: none;
+    border: none;
+    color: #ff9000;
+    font-size: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Stylizacja logo */
+/* Stylizacja logo */
+.ph-logo {
+    display: flex; /* Ustawiamy, żeby "Porn" i "hub" były obok siebie */
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 600; /* Użycie pogrubienia dla lepszego wyglądu */
+    font-size: 28px; /* Zwiększamy rozmiar czcionki */
+    line-height: 1; /* Pomaga w wyrównaniu */
+}
+
+/* Styl dla "Porn" - to jest biały tekst */
+.ph-logo-text {
+    color: white;
+    /* Drobne dostosowanie interlinii */
+    padding: 0; 
+}
+
+/* Styl dla "hub" - to jest czarny tekst na pomarańczowym tle */
+.ph-logo-hub {
+    background-color: #ff9000; /* Pomarańcz */
+    color: black;
+    padding: 5px 10px; /* Dodajemy padding dookoła słowa "hub" */
+    border-radius: 5px; /* Delikatne zaokrąglenie */
+    margin-left: 2px; /* Drobny odstęp od "Porn" */
+    font-weight: 600; /* Tak samo grube jak "Porn" */
+}
+
+/* Pasek wyszukiwania */
+.ph-search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Pasek rozciąga się, zajmując wolne miejsce */
+    max-width: 600px;
+    background-color: #333333; /* Ciemny kolor pola */
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 15px;
+}
+.ph-search-bar input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+}
+.ph-search-bar input::placeholder {
+    color: #aaaaaa;
+}
+.ph-search-icon {
+    color: #aaaaaa;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+/* Pomarańczowy przycisk "KLIKNIJ OFF" */
+.ph-button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.ph-orange-button {
+    background-color: #ff9000;
+    color: black;
+}
+
+/* Ikony po prawej stronie */
+.ph-icons {
+    display: flex;
+    align-items: center;
+}
+.ph-icon {
+    font-size: 24px;
+    color: #aaaaaa;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.ph-profile {
+    /* Szare tło dla ikon profilu */
+    color: #212121; 
+    background-color: #444444;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Dolne menu */
+.ph-bottom-nav {
+    background-color: #212121; 
+    border-top: 1px solid #333333; /* Delikatna separacja */
+    padding: 10px 20px;
+}
+.ph-bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.ph-bottom-links li {
+    margin-right: 30px;
+}
+.ph-bottom-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.ph-bottom-links a:hover {
+    color: #ff9000;
+}
+/* Nowe reguły dla wyśrodkowania i maksymalnej szerokości */
+.ph-container {
+    max-width: 1200px; /* Maksymalna szerokość treści */
+    margin: 0 auto; /* Wyśrodkowanie na ekranie */
+    padding: 0 20px; /* Dodatkowe wewnętrzne odstępy po bokach, żeby na małych ekranach nie przylegało */
+}
+
+/* Stare reguły muszą zostać dostosowane */
+
+/* Zmień te stare reguły w style.css: */
+.ph-top-nav {
+    background-color: #000000;
+    /* Usuwamy stare padding, bo teraz zajmie się tym .ph-container */
+    /* padding: 5px 20px; */ 
+    padding: 5px 0; /* Zostawiamy padding góra/dół */
+    font-size: 12px;
+}
+/* ... */
+.ph-main-bar {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    /* Usuwamy stare padding, bo teraz zajmie się tym .ph-main-content */
+    /* padding: 10px 20px; */
+    padding: 0; /* Usuwamy całe padding z głównego paska */
+}
+/* I dodajemy padding do nowego kontenera głównego paska: */
+.ph-main-content {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Wracamy do pierwotnego padding góra/dół i po bokach */
+    width: 100%; /* Rozciągamy go na całą szerokość ph-container */
+}
+/* ... */
+.ph-bottom-nav {
+    background-color: #212121;
+    border-top: 1px solid #333333;
+    /* Usuwamy stare padding */
+    /* padding: 10px 20px; */
+    padding: 10px 0; /* Zostawiamy padding góra/dół */
+}
+
+body
+{
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+}
+/* Układ główny strony (Flexbox/Grid) */
+.ph-video-layout {
+    display: flex; /* Używamy Flexboxa do ułożenia kolumn obok siebie */
+    gap: 20px; /* Odstęp między głównym wideo a boczną kolumną */
+    padding-top: 20px;
+}
+
+/* LEWA STRONA: Odtwarzacz i info */
+.ph-main-video-area {
+    flex-grow: 1; /* Główna kolumna zajmuje całe dostępne miejsce */
+    max-width: 900px; /* Ograniczenie, aby nie była zbyt szeroka */
+}
+
+/* Odtwarzacz Wideo (statyczna ramka) */
+.ph-video-player-container {
+    position: relative;
+    background-color: black;
+    /* Proporcje 16:9, możesz ustawić konkretną wysokość, np. 500px, jeśli używasz tylko obrazka */
+    height: 0;
+    padding-bottom: 56.25%; /* Utrzymanie proporcji 16:9 dla responsywności */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.ph-video-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pasek kontrolny symulacja */
+.ph-video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.ph-control-right {
+    color: #aaaaaa;
+}
+
+
+/* Info pod wideo (tytuł, akcje) */
+.ph-video-info {
+    border-bottom: 1px solid #333333; /* Linia rozdzielająca */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.ph-video-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.ph-video-meta {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.ph-video-meta span {
+    margin-right: 15px;
+}
+
+/* Przyciski akcji (like, share, itd.) */
+.ph-video-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.ph-action-btn {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.ph-action-btn:hover {
+    background-color: #444444;
+}
+
+/* Sekcja małych miniatur pod filmem */
+.ph-related-thumbs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.ph-related-thumbs img {
+    /* ZMIANA: Zmniejszamy wysokość, aby miniaturki były mniejsze */
+    height: 200px; /* PRZYKŁADOWA NOWA WYSOKOŚĆ */
+    
+    /* Pozostałe style pozostają bez zmian */
+    width: calc(25% - 8px); 
+    object-fit: cover; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sekcja komentarzy */
+.ph-comments-section h2 {
+    color: white;
+    font-size: 16px;
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+/* PRAWA STRONA: Kolumna boczna (Sidebar) */
+.ph-sidebar {
+    width: 300px; /* Standardowa szerokość kolumny bocznej */
+    flex-shrink: 0; /* Zapobiega zmniejszaniu szerokości */
+}
+
+/* Reklamy (Ad boxes) */
+.ph-ad-box {
+    background-color: #212121;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+.ph-ad-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px 0;
+}
+.ph-ad-blue {
+    background-color: #007bff; /* Tło dla niebieskiej reklamy */
+    color: white;
+}
+
+.ph-ad-yellow 
+{
+    background-color: gold;
+    color: black;
+}
+.ph-ad-live-label2
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+.ph-ad-live-label3
+{
+    font-size: 20px;
+}
+
+.ph-ad-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.ph-ad-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow; /* Podkreślenie +7.5 cm */
+}
+.ph-ad-live-label {
+    background-color: red;
+    color: white;
+    padding: 3px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* Sugerowane filmy (Sidebar) */
+.ph-suggested-video {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.ph-suggested-thumb {
+    width: 140px; /* Szerokość miniatury bocznej */
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 5px;
+}
+.ph-suggested-info {
+    text-align: left;
+}
+.ph-suggested-title {
+    color: white;
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+}
+.ph-suggested-views {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+.ph-suggested-stats {
+    margin-left: 10px;
+}
+/* Odtwarzacz Wideo (statyczna ramka) */
+.ph-video-player-container {
+    position: relative;
+    background-color: black;
+    height: 0;
+    padding-bottom: 56.25%; /* Utrzymanie proporcji 16:9 */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Nowy styl dla elementu wideo, aby wypełnił kontener 16:9 */
+.ph-video-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pasek kontrolny (symulacja), który wraca na swoje miejsce */
+.ph-video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    z-index: 10; /* Upewnia się, że jest na wierzchu wideo */
+}
+/* ... (Pozostałe style .ph-control-left/right) ... */
